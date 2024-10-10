@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # MIT License
 # Copyright (c) 2024 Sergey B <dkc.sergey.dema@gmail.com>
 
