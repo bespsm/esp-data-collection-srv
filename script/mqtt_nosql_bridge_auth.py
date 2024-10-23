@@ -13,6 +13,7 @@ import json
 from systemd.daemon import notify
 import signal
 
+dbName = 'espData'
 logger = logging.getLogger("ESP")
 table = None
 global run
@@ -68,7 +69,7 @@ if __name__ == "__main__":
 
     logger.info("connecting to dynamodb")
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('EspData')
+    table = dynamodb.Table(dbName)
 
     # systemd notification
     notify("READY=1")
