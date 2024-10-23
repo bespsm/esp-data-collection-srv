@@ -42,8 +42,8 @@ def on_message(client, userdata, msg):
     except json.decoder.JSONDecodeError:
         logger.error("couldn't parse: " + str(msg.payload) + ", skip")
 
-def on_subscribe(mqttc, obj, mid, reason_code_list, properties):
-    logger.info("Subscribed: " + str(mid) + " " + str(reason_code_list))
+def on_subscribe(client, userdata, mid, granted_qos):
+    logger.info("Subscribed to qos: " + ' '.join(str(e) for e in granted_qos))
 
 
 # def on_log(mqttc, obj, level, string):
