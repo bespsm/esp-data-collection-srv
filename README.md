@@ -1,9 +1,13 @@
-SERVER SIDE FOR ESP DATA COLLECTION PROJECT
-===========================================
+# SERVER SIDE FOR ESP DATA COLLECTION
 
-This repository collects the data that is deployed to EC2 server instance over terraform configs.
-- In folder "scripts" are located the python scripts that forwards all MQTT messages to DynamoDB
-- In folder "grafana_cfg" are located configs for the datasource (prometheus) and for ESP32 data collection dashboard
+This repository contains:
+- configs for deployment to EC2 instance over [terraform code](https://github.com/bespsm/esp-data-collection-tf) (folders: *grafana_cfg*, *script*)
+- configs for local deployment over *docker compose* (folders: *docker*)
+
+To deploy server side infrastructure locally (tested on Ubuntu 22.04), run:
+```
+docker compose up -d
+```
 
 License
 =======
